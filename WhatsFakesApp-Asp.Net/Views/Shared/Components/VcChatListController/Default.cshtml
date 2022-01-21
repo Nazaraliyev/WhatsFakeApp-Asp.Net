@@ -8,18 +8,19 @@
 <ul id="chat-list">
 	@foreach (var user in Model.customUsers)
 	{
+		<a asp-controller = "chat" asp-action = "Index" asp-route-id = "@user.Id" style = "color : transparent">
 		<li class="d-flex w-100">
 			<div class="profile-img">
-				@{
-					if (user.Profile != null)
-					{
+					@{
+						if (user.Profile != null)
+						{
 						<img src="~/assets/img/@user.Profile" />
-					}
-					else
-					{
+						}
+						else
+						{
 						<img src="~/assets/img/profile.png" />
+						}
 					}
-				}
 			</div>
 			<div class="list-message">
 				<div class="message-head d-flex justify-content-between">
@@ -32,6 +33,7 @@
 				</div>
 			</div>
 		</li>
+		</a>
 	}
 </ul>
 

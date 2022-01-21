@@ -31,6 +31,7 @@
 			<h1>Welcome WhatsFakesApp</h1>
 			<h3>Register</h3>
 			<form asp-controller = "account" asp-action = "register" method = "post" class="w-25">
+				<div asp-validation-summary = "All" class = "text-danger mb-3"></div>
 				<div class="my-form w-100">
 					<label class="my-form-label" data-index="0" asp-for = "@Model.Fullname">Fullname</label>
 					<input data-index="0"
@@ -43,7 +44,7 @@
 					<label class="my-form-label" data-index="1" asp-for = "@Model.Mail">Email</label>
 					<input data-index="1"
 						   type="email"
-						   asp-for = "@Model.Fullname"
+						   asp-for = "@Model.Mail"
 						   id="email"
 						   class="w-100 my-form-input" />
 				</div>

@@ -190,3 +190,4 @@ N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\bin\Debug\net5.0\runtim
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
+N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Components\VcChatListController\Default.cshtml.g.cs

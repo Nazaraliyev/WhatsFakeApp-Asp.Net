@@ -55,7 +55,7 @@ namespace WhatsFakesApp_Asp.Net
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Account}/{action=Login}/{id?}");
                 endpoints.MapHub<ChatHUB>("/chat");
             });
         }

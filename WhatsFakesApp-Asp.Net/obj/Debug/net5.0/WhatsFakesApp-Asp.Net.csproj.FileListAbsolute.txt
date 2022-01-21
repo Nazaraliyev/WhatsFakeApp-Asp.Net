@@ -63,7 +63,6 @@ N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\static
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\WhatsFakesApp-Asp.Net.TagHelpers.input.cache
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\WhatsFakesApp-Asp.Net.TagHelpers.output.cache
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\WhatsFakesApp-Asp.Net.RazorCoreGenerate.cache
-N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -191,3 +190,6 @@ N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\bin\Debug\net5.0\runtim
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Account\Register.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Components\VcChatListController\Default.cshtml.g.cs
+N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Components\VcSignInController\Default.cshtml.g.cs
+N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Chat\Index.cshtml.g.cs
+N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs

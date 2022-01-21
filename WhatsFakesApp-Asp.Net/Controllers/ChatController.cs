@@ -2,7 +2,7 @@
 
 namespace WhatsFakesApp_Asp.Net.Controllers
 {
-	public class HomeController : Controller
+	public class ChatController : Controller
 	{
 		public IActionResult Index()
 		{

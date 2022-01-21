@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PIK7OU7of1Kp0KdJK85ek7AtF2T3LparCv8JkTflQAtoqo1rDTJUTSp5X7D1xG/JTzc3bmDNVuKfTuWszxjuVA==",
+  "success": true,
+  "projectFilePath": "N:\\Codes\\Back\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nazar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}

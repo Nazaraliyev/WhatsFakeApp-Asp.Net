@@ -14,6 +14,6 @@ namespace WhatsFakesApp_Asp.Net.Data
 
 
 		public DbSet<CustomUser> customUsers { get; set; }
-		public DbSet<Message> messages { get; set; }
+		public DbSet<ChatMessage> messages { get; set; }
 	}
 }

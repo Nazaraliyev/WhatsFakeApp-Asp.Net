@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WhatsFakesApp_Asp.Net.Models
 {
-	public class Message
+	public class ChatMessage
 	{
 		[Key]
 		public int Id { get; set; }

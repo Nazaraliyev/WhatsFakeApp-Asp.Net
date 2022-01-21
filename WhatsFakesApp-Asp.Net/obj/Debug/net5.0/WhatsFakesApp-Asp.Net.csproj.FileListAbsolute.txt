@@ -64,7 +64,6 @@ N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\WhatsF
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\WhatsFakesApp-Asp.Net.TagHelpers.output.cache
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\WhatsFakesApp-Asp.Net.RazorCoreGenerate.cache
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs

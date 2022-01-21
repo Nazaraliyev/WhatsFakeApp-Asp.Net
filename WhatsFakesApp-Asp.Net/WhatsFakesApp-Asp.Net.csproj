@@ -5,4 +5,8 @@
     <RootNamespace>WhatsFakesApp_Asp.Net</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\assets\" />
+  </ItemGroup>
+
 </Project>

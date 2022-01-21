@@ -1,0 +1,83 @@
+$primary-color: #2a2f32;
+$secondary-color: #131c21;
+$chat-color: #131c21;
+$text-color: #b1b3b5;
+$line-color: rgba(255, 255, 255, 0.1);
+$chat-background : #0D1418;
+$chat-input-background : #1E2428;
+$sender-color : rgb(5,96,98);
+$receiver : #262D31;
+$time-color : #1E2A30;
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #090e11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul, div, p, h6{
+    padding: 0;
+    margin: 0;
+}
+
+#my-container {
+  width: 1300px;
+  height: 95vh;
+  background-color: $secondary-color;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    img {
+      width: 90%;
+      height: 90%;
+      border-radius: 50%;
+    }
+  }
+
+.col-4,
+.col-8 {
+  padding: 0;
+}
+
+.chat-header {
+  background-color: $primary-color;
+  padding: 10px 20px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $text-color; 
+  border-radius: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+// Imports
+@import "menu";
+@import "chat";
+@import "login";
+@import "register";

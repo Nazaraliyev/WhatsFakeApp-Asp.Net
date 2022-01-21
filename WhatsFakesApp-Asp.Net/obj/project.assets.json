@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "N:\\Codes\\Back\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net.csproj",
+      "projectUniqueName": "N:\\Codes\\Back\\WhatsfakeApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net.csproj",
       "projectName": "WhatsFakesApp-Asp.Net",
-      "projectPath": "N:\\Codes\\Back\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net.csproj",
+      "projectPath": "N:\\Codes\\Back\\WhatsfakeApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net.csproj",
       "packagesPath": "C:\\Users\\nazar\\.nuget\\packages\\",
-      "outputPath": "N:\\Codes\\Back\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\WhatsFakesApp-Asp.Net\\obj\\",
+      "outputPath": "N:\\Codes\\Back\\WhatsfakeApp-Asp.Net\\WhatsFakesApp-Asp.Net\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nazar\\AppData\\Roaming\\NuGet\\NuGet.Config",

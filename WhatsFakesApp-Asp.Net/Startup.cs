@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -7,7 +9,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WhatsFakesApp_Asp.Net.Data;
 using WhatsFakesApp_Asp.Net.Hubs;
+using WhatsFakesApp_Asp.Net.Models;
 
 namespace WhatsFakesApp_Asp.Net
 {
@@ -24,6 +28,8 @@ namespace WhatsFakesApp_Asp.Net
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<AppDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("WhatsFakeAppCS")));
+            services.AddIdentity<CustomUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
             services.AddSignalR();
         }
 
@@ -42,6 +48,7 @@ namespace WhatsFakesApp_Asp.Net
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

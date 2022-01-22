@@ -62,12 +62,18 @@ const inputFocus = () => {
 const Adjust = () => {
     //Menu
     var myContainerHeight = $("#my-container").outerHeight();
-    var chatHeadHeight = $("#menu .chat-header").outerHeight() + $("#search-section").outerHeight();
+    console.log(myContainerHeight);
 
+    var chatHeadHeight = $("#menu .chat-header").outerHeight() + $("#search-section").outerHeight();
     console.log(chatHeadHeight);
+    $("#chat-list").css("height", myContainerHeight - chatHeadHeight + "px");
+
+
     // Chat
     var chatMessagesOutHeight = $("#chat-profile-info-wrapper").outerHeight() + $("#message-input-wrapper").outerHeight();
+    //console.log(chatMessagesOutHeight);
 
-    $("#chat-list").css("height", myContainerHeight - chatHeadHeight + "px");
+
+
     $("#chat-messages-container").css("height", myContainerHeight - chatMessagesOutHeight);
 };

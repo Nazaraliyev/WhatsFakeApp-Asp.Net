@@ -30,37 +30,42 @@
 			</div>
 			<h1>Welcome WhatsFakesApp</h1>
 			<h3>Register</h3>
-			<form asp-controller = "account" asp-action = "register" method = "post" class="w-25">
-				<div asp-validation-summary = "All" class = "text-danger mb-3"></div>
+			<form asp-controller="account" asp-action="register" method="post" class="w-25" enctype = "multipart/form-data">
+				<div asp-validation-summary="All" class="text-danger mb-3"></div>
 				<div class="my-form w-100">
-					<label class="my-form-label" data-index="0" asp-for = "@Model.Fullname">Fullname</label>
-					<input data-index="0"
-						   type="text"
-						   id="Fullname"
-						   asp-for = "@Model.Fullname"
+					<input id="Fullname"
+						   asp-for="@Model.ProfileFile"
 						   class="w-100 my-form-input" />
 				</div>
 				<div class="my-form w-100">
-					<label class="my-form-label" data-index="1" asp-for = "@Model.Mail">Email</label>
+					<label class="my-form-label" data-index="0" asp-for="@Model.Fullname">Fullname</label>
+					<input data-index="0"
+						   type="text"
+						   id="Fullname"
+						   asp-for="@Model.Fullname"
+						   class="w-100 my-form-input" />
+				</div>
+				<div class="my-form w-100">
+					<label class="my-form-label" data-index="1" asp-for="@Model.Mail">Email</label>
 					<input data-index="1"
 						   type="email"
-						   asp-for = "@Model.Mail"
+						   asp-for="@Model.Mail"
 						   id="email"
 						   class="w-100 my-form-input" />
 				</div>
 				<div class="my-form w-100">
-					<label class="my-form-label" data-index="2" asp-for = "@Model.Password">Password</label>
+					<label class="my-form-label" data-index="2" asp-for="@Model.Password">Password</label>
 					<input data-index="2"
 						   type="password"
-						   asp-for = "@Model.Password"
+						   asp-for="@Model.Password"
 						   id="password"
 						   class="w-100 my-form-input" />
 				</div>
 				<div class="my-form w-100">
-					<label class="my-form-label" data-index="3" asp-for = "@Model.CoPassword">Password Confirm</label>
+					<label class="my-form-label" data-index="3" asp-for="@Model.CoPassword">Password Confirm</label>
 					<input data-index="3"
 						   type="password"
-						   asp-for = "@Model.CoPassword"
+						   asp-for="@Model.CoPassword"
 						   id="c-password"
 						   class="w-100 my-form-input" />
 				</div>

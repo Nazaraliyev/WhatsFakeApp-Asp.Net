@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace WhatsFakesApp_Asp.Net.ViewModel
 {
@@ -11,6 +12,11 @@ namespace WhatsFakesApp_Asp.Net.ViewModel
 
 		[MaxLength(100), Required, EmailAddress]
 		public string Mail { get; set; }
+
+
+
+		public IFormFile ProfileFile { get; set; }
+		public string Profile { get; set; }
 
 
 

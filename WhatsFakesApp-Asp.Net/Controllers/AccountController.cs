@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.IO;
 using System.Threading.Tasks;
 using WhatsFakesApp_Asp.Net.Data;
 using WhatsFakesApp_Asp.Net.Models;
@@ -13,12 +16,15 @@ namespace WhatsFakesApp_Asp.Net.Controllers
 		private readonly AppDbContext _context;
 		private readonly UserManager<CustomUser> _userManager;
 		private readonly SignInManager<CustomUser> _signInManager;
+		private readonly IWebHostEnvironment _webHost;
 
-		public AccountController(AppDbContext context, UserManager<CustomUser> userManager, SignInManager<CustomUser> signInManager)
+		public AccountController(AppDbContext context, UserManager<CustomUser> userManager, SignInManager<CustomUser> signInManager, IWebHostEnvironment webHost)
+			
 		{
 			_context = context;
 			_userManager = userManager;
 			_signInManager = signInManager;
+			_webHost = webHost;
 		}
 		public IActionResult Login()
 		{
@@ -58,11 +64,42 @@ namespace WhatsFakesApp_Asp.Net.Controllers
 		public async Task<IActionResult> Register(VmRegister model)
 		{
 			if(!ModelState.IsValid) return View(model);
+			if(await _userManager.FindByEmailAsync(model.Mail) != null)
+			{
+				ModelState.AddModelError("", "You can not use this Username");
+				return View(model);
+			}
+			if(model.ProfileFile != null)
+			{
+
+				if(model.ProfileFile.ContentType == "image/jpeg" || model.ProfileFile.ContentType == "image/png")
+				{
+					if (model.ProfileFile.Length > 3145728)
+					{
+						ModelState.AddModelError("", "You can only upload image until 3mb");
+						return View(model);
+					}
+
+					string fileName = Guid.NewGuid() + "-" + model.ProfileFile.FileName;
+					string filePath = Path.Combine(_webHost.WebRootPath, "assets/img/profiles", fileName);
+					using (var stream = new FileStream(filePath, FileMode.Create))
+					{
+						model.ProfileFile.CopyTo(stream);
+					}
+					model.Profile = fileName;
+				}
+				else
+				{
+					ModelState.AddModelError("", "You can only upload Image file");
+					return View(model);
+				}
+			}
 			CustomUser user = new CustomUser()
 			{
 				Fullname = model.Fullname,
 				Email = model.Mail,
 				UserName = model.Mail,
+				Profile = model.Profile
 			};
 
 			var result = await _userManager.CreateAsync(user, model.Password);

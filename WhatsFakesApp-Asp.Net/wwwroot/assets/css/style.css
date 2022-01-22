@@ -44,6 +44,7 @@ ul, div, p, h6 {
   width: 90%;
   height: 90%;
   border-radius: 50%;
+  object-fit : cover;
 }
 
 .col-4,

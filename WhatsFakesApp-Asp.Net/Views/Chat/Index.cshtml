@@ -1,11 +1,24 @@
-﻿<div id="chat-profile-info-wrapper" class="chat-header">
+﻿@model VmChat
+@inject UserManager<CustomUser> _userManager
+
+
+<div id="chat-profile-info-wrapper" class="chat-header">
 	<div class="d-flex justify-content-between">
 		<div class="d-flex">
 			<div class="profile-img">
-				<img src="/img/profile.png" alt="" />
+				@{
+					if (@Model.Receiver.Profile != null)
+					{
+						<img src="~/assets/img/@Model.Receiver.Profile" />
+					}
+					else
+					{
+						<img src="~/assets/img/profile.png" />
+					}
+				}
 			</div>
 			<div id="profile-info">
-				<h6>Name</h6>
+				<h6>@Model.Receiver.Fullname</h6>
 				<p>Status</p>
 			</div>
 		</div>
@@ -30,12 +43,32 @@
 				<span>12:00</span>
 			</li>
 		</ul>
-		<ul class="sender msg">
-			<p>Salam</p>
-			<span>12:00</span>
-		</ul>
 
-
+		@foreach (var message in @Model.messages)
+		{
+			if (@message.SenderId == _userManager.GetUserId(User))
+			{
+				<ul class="sender msg">
+					<p>@message.Content</p>
+					<span>@message.CreatedTime.ToString("HH:MM")</span>
+				</ul>
+				<ul class="sender msg">
+					<p>@message.Content</p>
+					<span>12:00</span>
+				</ul>
+			}
+			else
+			{
+				<ul class="receiver msg">
+					<p>@message.Content</p>
+					<span>@message.CreatedTime.ToString("HH:MM")</span>
+				</ul>
+				<ul class="sender msg">
+					<p>@message.Content</p>
+					<span>12:00</span>
+				</ul>
+			}
+		}
 	</div>
 </div>
 <div id="message-input-wrapper" class="d-flex">
@@ -50,7 +83,11 @@
 	<textarea type="text"
 			  placeholder="Type a message"
 			  id="message-input"></textarea>
+	<input id = "receiverId" value = "@Model.Receiver.Id" hidden/>
+	<input id = "senderId" value = "@_userManager.GetUserId(User)" hidden/>
 	<button id="send-message-btn">
 		<i class="fas fa-paper-plane"></i>
 	</button>
 </div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>

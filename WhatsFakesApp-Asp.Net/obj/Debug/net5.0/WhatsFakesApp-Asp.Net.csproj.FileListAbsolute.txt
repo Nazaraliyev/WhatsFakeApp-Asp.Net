@@ -192,4 +192,3 @@ N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Components\VcChatListController\Default.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Chat\Index.cshtml.g.cs
 N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
-N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\obj\Debug\net5.0\Razor\Views\Shared\Components\VcSignInUserController\Default.cshtml.g.cs

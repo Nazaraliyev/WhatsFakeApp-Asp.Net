@@ -5,30 +5,31 @@ var connection = new signalR.HubConnectionBuilder().withUrl("/chat").build();
 //Disable send button until connection is established
 //document.getElementById("sendButton").disabled = /*true*/;
 
-connection.on("ReceiveMessage", function (message, receiver, sender) {
-    console.log("message received")
+connection.on("ReceiveMessage", function (message, sender) {
 
-    var ul = document.createElement("ul");
-    ul.classList = "sender msg";
+    var receiverId = document.getElementById("receiverId").value;
 
-    var li = document.createElement("li");
+    if (receiverId == sender) {
+        var ul = document.createElement("ul");
+        ul.classList = "receiver msg";
 
-    var p = document.createElement("p");
-    p.innerHTML = message;
+        var li = document.createElement("li");
 
-    var span = document.createElement("span");
-    span.innerHTML = "12:02";
+        var p = document.createElement("p");
+        p.innerHTML = message;
 
-    li.appendChild(p);
-    li.appendChild(span);
-    ul.appendChild(li);
+        var span = document.createElement("span");
+        span.innerHTML = "12:02";
 
-    console.log(ul);
+        li.appendChild(p);
+        li.appendChild(span);
+        ul.appendChild(li);
 
-    document.getElementById("chat-messages-container").appendChild(ul);
-    // We can assign user-supplied strings to an element's textContent because it
-    // is not interpreted as markup. If you're assigning in any other way, you 
-    // should be aware of possible script injection concerns.
+        console.log(ul);
+
+        document.getElementById("chat-messages-container").appendChild(ul);
+    }
+
 });
 
 connection.start().then(function () {
@@ -41,13 +42,32 @@ document.getElementById("send-message-btn").addEventListener("click", function (
     var message = document.getElementById("message-input").value;
     var receiverId = document.getElementById("receiverId").value;
     var senderId = document.getElementById("senderId").value;
-    console.log(receiverId)
-    console.log(senderId)
-    console.log("message : " + message);
-    //var message = document.getElementById("messageInput").value;
-    connection.invoke("SendMessage", message, receiverId, senderId).catch(function (err) {
-        return console.error(err.toString());
-    });
-    console.log("message sended")
-    event.preventDefault();
+    if (message != "") {
+        connection.invoke("SendMessage", message, receiverId, senderId).catch(function (err) {
+            return console.error(err.toString());
+        });
+        event.preventDefault();
+
+
+        var ul = document.createElement("ul");
+        ul.classList = "sender msg";
+
+        var li = document.createElement("li");
+
+        var p = document.createElement("p");
+        p.innerHTML = message;
+
+        var span = document.createElement("span");
+        var date = new Date();
+        var dateNow = date.getHours().toString().padStart(2, "0") + ":" + date.getMinutes().toString().padStart(2, "0");
+        span.innerHTML = dateNow;
+
+        li.appendChild(p);
+        li.appendChild(span);
+        ul.appendChild(li);
+
+        document.getElementById("message-input").value = "";
+
+        document.getElementById("chat-messages-container").appendChild(ul);
+    }
 });

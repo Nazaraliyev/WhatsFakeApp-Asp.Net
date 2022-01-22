@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
+using System;
 using System.Threading.Tasks;
 using WhatsFakesApp_Asp.Net.Data;
 using WhatsFakesApp_Asp.Net.Models;
@@ -19,14 +20,15 @@ namespace WhatsFakesApp_Asp.Net.Hubs
         }
         public async Task SendMessage(string message, string receiver, string sender)
         {
-            await Clients.All.SendAsync("ReceiveMessage", message);
+            await Clients.User(receiver).SendAsync("ReceiveMessage", message, sender);
 
 
             ChatMessage msg = new ChatMessage()
             {
                 Content = message,
                 SenderId = sender,
-                ReceiverId = receiver
+                ReceiverId = receiver,
+                CreatedTime = DateTime.Now
             };
             await _context.messages.AddAsync(msg);
             await _context.SaveChangesAsync();

@@ -46,28 +46,10 @@
 
 		@foreach (var message in @Model.messages)
 		{
-			if (@message.SenderId == _userManager.GetUserId(User))
-			{
-				<ul class="sender msg">
-					<p>@message.Content</p>
-					<span>@message.CreatedTime.ToString("HH:MM")</span>
-				</ul>
-				<ul class="sender msg">
-					<p>@message.Content</p>
-					<span>12:00</span>
-				</ul>
-			}
-			else
-			{
-				<ul class="receiver msg">
-					<p>@message.Content</p>
-					<span>@message.CreatedTime.ToString("HH:MM")</span>
-				</ul>
-				<ul class="sender msg">
-					<p>@message.Content</p>
-					<span>12:00</span>
-				</ul>
-			}
+			<ul class="msg @(message.SenderId == _userManager.GetUserId(User)? "sender" : "receiver")">
+				<p>@message.Content</p>
+				<span>@message.CreatedTime.ToString("HH:MM")</span>
+			</ul>
 		}
 	</div>
 </div>
@@ -83,8 +65,8 @@
 	<textarea type="text"
 			  placeholder="Type a message"
 			  id="message-input"></textarea>
-	<input id = "receiverId" value = "@Model.Receiver.Id" hidden/>
-	<input id = "senderId" value = "@_userManager.GetUserId(User)" hidden/>
+	<input id="receiverId" value="@Model.Receiver.Id" hidden />
+	<input id="senderId" value="@_userManager.GetUserId(User)" hidden />
 	<button id="send-message-btn">
 		<i class="fas fa-paper-plane"></i>
 	</button>

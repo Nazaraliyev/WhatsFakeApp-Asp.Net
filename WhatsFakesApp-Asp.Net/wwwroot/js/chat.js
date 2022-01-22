@@ -39,6 +39,9 @@ connection.start().then(function () {
 
 document.getElementById("send-message-btn").addEventListener("click", function (event) {
     var message = document.getElementById("message-input").value;
+    var receiverId = document.getElementById("receiverId").value;
+    var senderId = document.getElementById("senderId").value;
+    console.log(receiverId)
     console.log("message : " + message);
     //var message = document.getElementById("messageInput").value;
     connection.invoke("SendMessage", message).catch(function (err) {

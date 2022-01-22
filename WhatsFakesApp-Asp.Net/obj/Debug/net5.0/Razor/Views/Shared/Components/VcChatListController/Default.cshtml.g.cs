@@ -33,8 +33,15 @@ using WhatsFakesApp_Asp.Net.ViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0cf656e084754ecfd8abd9ee3a88863df743e2bf", @"/Views/Shared/Components/VcChatListController/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2d6027315947e7a48dea7b70f94c11b10c0fc0cd", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"938e741a83f1a49e8934463264f60ad4b595db78", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_VcChatListController_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VmChatList>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/assets/img/profile.png"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -85,7 +92,7 @@ using WhatsFakesApp_Asp.Net.ViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0cf656e084754ecfd8abd9ee3a88863df743e2bf5524", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "0cf656e084754ecfd8abd9ee3a88863df743e2bf5725", async() => {
                 WriteLiteral("\r\n\t\t<li class=\"d-flex w-100\">\r\n\t\t\t<div class=\"profile-img\">\r\n");
 #nullable restore
 #line 14 "N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\Views\Shared\Components\VcChatListController\Default.cshtml"
@@ -97,7 +104,7 @@ using WhatsFakesApp_Asp.Net.ViewModel;
 #line hidden
 #nullable disable
                 WriteLiteral("\t\t\t\t\t\t");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0cf656e084754ecfd8abd9ee3a88863df743e2bf6162", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0cf656e084754ecfd8abd9ee3a88863df743e2bf6363", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -130,7 +137,7 @@ AddHtmlAttributeValue("", 364, user.Profile, 364, 13, false);
 #line hidden
 #nullable disable
                 WriteLiteral("\t\t\t\t\t\t");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0cf656e084754ecfd8abd9ee3a88863df743e2bf8020", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0cf656e084754ecfd8abd9ee3a88863df743e2bf8221", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

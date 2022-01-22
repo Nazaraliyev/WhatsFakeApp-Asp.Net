@@ -18,14 +18,8 @@ namespace WhatsFakesApp_Asp.Net.Models
 		public DateTime CreatedTime { get; set; }
 
 
+		public string SenderId { get; set; }
 
-		[ForeignKey("SenderId")]
-		public int SenderId { get; set; }
-		public CustomUser Sender { get; set; }
-
-
-		[ForeignKey("ReceiverId")]
-		public int ReceiverId { get; set; }
-		public CustomUser Receiver { get; set; }
+		public string ReceiverId { get; set; }
 	}
 }

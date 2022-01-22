@@ -33,8 +33,15 @@ using WhatsFakesApp_Asp.Net.ViewModel;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 4 "N:\Codes\Back\WhatsfakeApp-Asp.Net\WhatsFakesApp-Asp.Net\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a0f95ebc3c2dc72770eb60036099cbcd2787088", @"/Views/Shared/Components/VcSignInUserController/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2d6027315947e7a48dea7b70f94c11b10c0fc0cd", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"938e741a83f1a49e8934463264f60ad4b595db78", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_VcSignInUserController_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<string>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("src", new global::Microsoft.AspNetCore.Html.HtmlString("~/assets/img/profile.png"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -83,7 +90,7 @@ using WhatsFakesApp_Asp.Net.ViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8a0f95ebc3c2dc72770eb60036099cbcd27870884768", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8a0f95ebc3c2dc72770eb60036099cbcd27870884969", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -116,7 +123,7 @@ AddHtmlAttributeValue("", 128, Model, 128, 6, false);
 #line hidden
 #nullable disable
             WriteLiteral("\t\t\t\t");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8a0f95ebc3c2dc72770eb60036099cbcd27870886539", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "8a0f95ebc3c2dc72770eb60036099cbcd27870886740", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

@@ -2,8 +2,11 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualStudio.Web.CodeGeneration.Contracts.Messaging;
 using System;
 using System.IO;
+using System.Net;
+using System.Net.Mail;
 using System.Threading.Tasks;
 using WhatsFakesApp_Asp.Net.Data;
 using WhatsFakesApp_Asp.Net.Models;
@@ -106,9 +109,53 @@ namespace WhatsFakesApp_Asp.Net.Controllers
 			if (result.Succeeded)
 			{
 				await _signInManager.SignInAsync(user, false);
-				return RedirectToAction("Index", "Home");
+
+				Random random = new Random();
+				int ConfirmNum = random.Next(1000,9999);
+				HttpContext.Session.SetString("Confirm", ConfirmNum.ToString());
+
+				MailMessage mail = new MailMessage();
+				mail.From = new MailAddress("nzr.testmail@gmail.com", "Confirm Mail");
+				mail.To.Add(model.Mail);
+				mail.Subject = "Welcome WhatsFake App";
+				mail.Body = "Your Confirm Code is " + ConfirmNum;
+
+				SmtpClient client = new SmtpClient();
+				client.Host = "smtp.gmail.com";
+				client.Port = 587;
+				client.EnableSsl = true;
+				client.Credentials = new NetworkCredential("nzr.testmail@gmail.com", "Test12345!");
+
+
+				client.Send(mail);
+
+				return RedirectToAction("Confirm");
 			}
 			return View();
+		}
+
+
+
+		public IActionResult Confirm()
+		{
+			return View();
+		}
+
+
+		[HttpPost]
+		public IActionResult Confirm(VmConfirm model)
+		{
+			if (!ModelState.IsValid)
+			{
+				return View(model);
+			}
+			if(HttpContext.Session.GetString("Confirm") != model.Code)
+			{
+				ModelState.AddModelError("","Code is not correct");
+				return View(model);
+			}
+
+			return RedirectToAction("Index", "Home");
 		}
 	}
 }

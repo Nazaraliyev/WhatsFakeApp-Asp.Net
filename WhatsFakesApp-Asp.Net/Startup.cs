@@ -32,6 +32,7 @@ namespace WhatsFakesApp_Asp.Net
             services.AddDbContext<AppDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("WhatsFakeAppCS")));
             services.AddIdentity<CustomUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
             services.AddSignalR();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +49,8 @@ namespace WhatsFakesApp_Asp.Net
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseSession();
 
             app.UseAuthentication();
             app.UseAuthorization();
